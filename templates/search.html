@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+{%block content%}
+<h1>Searched Item</h1>
+<div class="container" align="text-center">
+	<div class="row">
+		{%if result %}
+		{% for pro in result %}
+		{% include 'product.html'%}
+		{% endfor %}
+		{% else %}
+		<div>No match found</div>
+		{%endif%}
+	</div>
+</div>
+</div>
+{%endblock%}
